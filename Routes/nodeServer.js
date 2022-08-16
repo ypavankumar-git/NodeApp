@@ -17,6 +17,7 @@ const server = http.createServer((req, res) => {
     host: hostname, 
     user: dbUsername,
     password: dbPassword,
+    database: dbName,
     port: port,
   });
   console.log("3!");
