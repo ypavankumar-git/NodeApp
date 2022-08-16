@@ -25,7 +25,7 @@ const server = http.createServer((req, res) => {
      console.log("2");
     if (err) console.log(err);
     console.log("Connected!");
-    var sql = "select * from user";
+    var sql = "show databases";
     con.query(sql, function (err, result) {
       if (err) throw err;
       console.log(result);
