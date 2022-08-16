@@ -1,10 +1,10 @@
 const http = require("http");
 var mysql = require("mysql2");
-const hostname = process.env.MYSQL_HOSTNAME;
-const port = process.env.APP_PORT;
-const dbUsername = process.env.DB_USER_NAME;
-const dbPassword = process.env.DB_PASSWORD;
-const dbName = "mm";
+const hostname = process.env.MYSQL_HOSTNAME || "terraform-20220812130216823600000001.cdgkfoacvf6u.us-east-1.rds.amazonaws.com";
+const port = process.env.APP_PORT || "3306";
+const dbUsername = process.env.DB_USER_NAME || "Users";
+const dbPassword = process.env.DB_PASSWORD || "pavankumar";
+const dbName = process.env.DB_NAME || "UserDB";
 const node_port = "3030";
 const node_hostname = "0.0.0.0";
 console.log("0!");
@@ -17,7 +17,6 @@ const server = http.createServer((req, res) => {
     host: hostname, 
     user: dbUsername,
     password: dbPassword,
-     database: dbName,
     port: port,
   });
   console.log("3!");
