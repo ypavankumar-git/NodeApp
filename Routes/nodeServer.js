@@ -1,6 +1,6 @@
 const http = require("http");
 var mysql = require("mysql2");
-const hostname = process.env.MYSQL_HOSTNAME || "terraform-20220812130216823600000001.cdgkfoacvf6u.us-east-1.rds.amazonaws.com";
+const hostname = process.env.MYSQL_HOSTNAME || "terraform-20220816091643529400000003.cdgkfoacvf6u.us-east-1.rds.amazonaws.com";
 const port = process.env.APP_PORT || "3306";
 const dbUsername = process.env.DB_USER_NAME || "Users";
 const dbPassword = process.env.DB_PASSWORD || "pavankumar";
