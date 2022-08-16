@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../Docker_Assignment_2"
+		},
+		{
+			"path": "../../Docker-Swarm"
+		},
+		{
+			"path": "../../Docker-Swarm-2"
+		},
+		{
+			"path": "../../nginx"
+		},
+		{
+			"path": "../../Docker-compose for loadbalancing"
+		},
+		{
+			"path": "../../Terraform"
+		}
+	]
+}
