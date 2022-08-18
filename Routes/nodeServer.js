@@ -1,6 +1,6 @@
 const http = require("http");
 var mysql = require("mysql2");
-const hostname = process.env.DB_ENDPOINT || "terraform-20220817133916422600000005.cdgkfoacvf6u.us-east-1.rds.amazonaws.com";
+const hostname = process.env.DB_ENDPOINT || "terraform-20220817133916422600000005.cdgkfoacvf6u.us-east-1.rds.amazonaws.com:3306";
 const port = process.env.APP_PORT || "3306";
 const dbUsername = process.env.DB_USER_NAME || "Users";
 const dbPassword = process.env.DB_PASSWORD || "pavankumar";
@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
        console.log("1!");
   let dbResult;
   var con = mysql.createConnection({
-    host: hostname, 
+    host: hostname.slice(0,-5), 
     user: dbUsername,
     password: dbPassword,
     database: dbName,
